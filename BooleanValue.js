@@ -28,4 +28,4 @@ class BooleanValue extends ModelValue {
 }
 
 let b = new BooleanValue(true);
-console.log(b.asNum());
+console.log(b.modelType);

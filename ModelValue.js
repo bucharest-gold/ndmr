@@ -11,6 +11,10 @@ class ModelValue {
     this.ModelType = ModelType;
   }
 
+  get modelType() {
+    return this.ModelType;
+  }
+
   modelTypeBoolean() {
     return new ModelType().booleanX();
   }
