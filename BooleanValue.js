@@ -9,23 +9,23 @@ class BooleanValue extends ModelValue {
     this.value = value;
   }
 
-  asNum() {
+  asNum () {
     return this.value ? 1 : 0;
   }
 
-  asBool() {
+  asBool () {
     return this.value;
   }
 
-  asString() {
+  asString () {
     return 'todo';
   }
 
-  asBytes() {
+  asBytes () {
     return this.value ? [1] : [0];
   }
 
 }
 
-let b = new BooleanValue(true);
+let b = new BooleanValue(false);
 console.log(b.modelType);

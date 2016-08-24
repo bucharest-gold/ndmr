@@ -51,6 +51,7 @@ class ModelType {
     return new ModelType('p', 'PROPERTY');
   }
 
+  // TODO : replace with a better suffix instead 'X'.
   stringX () {
     return new ModelType('s', 'STRING');
   }
