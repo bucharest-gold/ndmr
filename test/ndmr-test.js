@@ -18,9 +18,21 @@
 
 const test = require('tape');
 const BooleanValue = require('../lib/BooleanValue');
+const DataOutput = require('../lib/DataOutput');
 
 test('Should test BooleanValue.', t => {
   let value = { ModelType: false, value: false };
   t.deepEqual(new BooleanValue(false), value);
+  t.end();
+});
+
+test('Should test DataOutput.', t => {
+  let dout = new DataOutput();
+  let bytes = { bytes: [] };
+  t.deepEqual(dout, bytes);
+
+  dout.writeUtf('abc');
+  bytes = { bytes: [ {}, [ 97, 98, 99 ] ] };
+  t.deepEqual(dout, bytes);
   t.end();
 });
