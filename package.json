@@ -1,20 +1,40 @@
 {
   "name": "ndmr",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
+  "description": "Nodejs module to execute operations on the JBoss AS7 DMR API.",
+  "author": "Red Hat, Inc.",
   "license": "Apache-2.0",
+  "scripts": {
+    "test": "tape test/ndmr-test.js | tap-spec",
+    "lint": "eslint test/ndmr-test.js index.js",
+    "prepublish": "nsp check",
+    "coverage": "istanbul cover tape test/ndmr-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bucharest-gold/ndmr.git"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "index.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/bucharest-gold/ndmr/issues"
+  },
+  "homepage": "https://github.com/bucharest-gold/ndmr",
+  "keywords": [],
   "devDependencies": {
-    "eslint": "^3.3.1",
-    "eslint-config-semistandard": "^7.0.0-beta.0",
-    "eslint-config-standard": "^6.0.0",
-    "eslint-plugin-promise": "^2.0.1",
-    "eslint-plugin-react": "^6.1.2",
-    "eslint-plugin-standard": "^2.0.0"
+    "eslint": "*",
+    "eslint-config-semistandard": "*",
+    "eslint-config-standard": "*",
+    "eslint-plugin-promise": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-standard": "*",
+    "istanbul": "*",
+    "nsp": "*",
+    "tap-spec": "*",
+    "tape": "*"
   }
 }
